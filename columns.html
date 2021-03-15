@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>columns</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200;300;400;500;600;700;900&display=swap"
+        rel="stylesheet">
+
+
+    <style>
+        /* important line */
+        .mag-line {
+            max-width: 1200px;
+            margin-top: 3rem;
+            margin-bottom: 1rem;
+
+            border: black 6px solid;
+            /* height: 1000vh; */
+
+
+        }
+
+        .info-line {
+            padding: 3rem;
+            max-width: 1000px;
+            margin: 0 auto;
+            /* index slider*/
+            border-bottom: #77777A 3px solid;
+
+
+        }
+
+
+        .info-line-2 {
+            max-width: 1000px;
+            /* index slider*/
+            margin-top: 3rem;
+            padding-bottom: 3rem;
+            border-bottom: #77777A 3px solid;
+            border-top: #77777A 3px solid;
+
+
+
+        }
+
+        .navbar {
+
+            height: 300px;
+            position: absolute;
+            left: 0;
+            margin-top: 0;
+            overflow: hidden;
+        }
+
+
+
+        .navbar-brand img {
+            width: 50rem;
+            height: 100%;
+            object-fit: cover;
+
+
+
+        }
+
+
+        p {
+            margin-bottom: 0;
+        }
+
+
+        .navbar-calendar {
+            height: 100px;
+            width: 100%;
+
+        }
+
+        .navbar-calendar img {
+            height: 100%;
+
+        }
+
+        .navbar-calendar-wrap {
+            font-family: 'Noto Serif TC', serif;
+        }
+
+        .menu-calendar-col {
+            width: 2px;
+            height: 50px;
+            background-color: #77777A;
+            margin-left: 30px;
+
+        }
+
+
+        .menu-weather {
+            margin: 0 auto;
+            margin-left: 20px;
+
+
+        }
+
+
+
+
+        /* footer style */
+
+
+        .footer {
+            display: flex;
+            flex-direction: column;
+            padding-top: 10rem;
+            padding-bottom: 15px;
+            margin: 0 auto;
+            font-family: 'Noto Serif TC', serif;
+
+        }
+
+        .ft-info {
+            height: 100%;
+            width: 100%;
+        }
+
+        .ft-info h1 {
+            font-family: 'Noto Serif TC', serif;
+            margin: 0 auto;
+        }
+
+        .ft-img-wrap {
+            padding-top: 15rem;
+            height: 100%;
+            width: 100%;
+            position: relative;
+            /* overflow: hidden; */
+        }
+
+        .ft-img-wrap img {
+            height: 300px;
+            width: 100%;
+            position: absolute;
+            object-fit: cover;
+
+        }
+
+
+        .ft-icon-wrap {
+            padding-top: 20rem;
+            padding-bottom: 5rem;
+            margin: 0 auto;
+            /* overflow: hidden; */
+        }
+
+        .ft-icon-wrap img {
+
+            height: 100%;
+            width: 50px;
+            object-fit: cover;
+
+
+        }
+
+
+        .navbar-nav {
+
+            display: flex;
+            font-size: 20px;
+            margin: 0 auto;
+
+
+        }
+
+
+        .footer-bottom {
+            padding-bottom: 5rem;
+        }
+
+        .ft-wrap {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .ft-line {
+            width: 100%;
+            border-top: #77777A 3px solid;
+            border-bottom: #77777A 3px solid;
+            margin-bottom: 1rem;
+        }
+
+
+
+
+        /* section columns 從這寫 不含頁尾頁首 */
+        .columns {
+            max-width: 1000px;
+            font-family: 'Noto Serif TC', serif;
+
+        }
+
+        .text-col {
+            margin-bottom: 3rem;
+        }
+
+
+        /* 圖片要設置高 寫死後才會出來 */
+        .colums-img {
+            height: 50%;
+            /* position: relative; */
+            overflow: hidden;
+
+        }
+
+
+
+        .colums-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* position: absolute; */
+
+
+        }
+
+    
+
+        /* header style */
+
+        #menu {
+            max-width: 1200px;
+            height: 320px;
+            margin: 0 auto;
+            position: relative;
+            /* background-color: rgb(246, 210, 216) !important; */
+            border-bottom: 9px solid black;
+
+
+        }
+
+
+
+        .header-info {
+            max-width: 1200px;
+            margin-top: 1rem;
+        }
+
+        .nav-link {
+            color: #77777A !important;
+        }
+
+        .nav-header {
+
+            position: relative;
+
+
+        }
+
+        .header-img-wrap {
+            top: 0;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+
+        }
+
+        .header-img-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .navbar-calendar-wrap {
+            width: 100%;
+
+        }
+
+        .btn-lg {
+            max-width: 1200px;
+            height: 100%;
+            margin: 0 auto;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: #77777A 3px solid;
+            border-bottom: #77777A 3px solid;
+
+        }
+
+        .nav-link {
+            font-family: 'Noto Serif TC', serif;
+        }
+
+        .navbar-item .nav-link {
+            color: #77777A !important;
+
+        }
+
+        .navlinks {
+            margin-top: 2rem;
+            border: #77777A 1px solid;
+        }
+
+
+        .nav-space-around {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+
+        }
+
+        .calendar-info h5 {
+            margin-top: 1rem;
+        }
+
+        .shop-list {
+
+            max-width: 1000px;
+            margin-bottom: 10rem;
+            font-family: 'Noto Serif TC', serif;
+
+        }
+
+        .shop-imgwrap {
+            width: 550px;
+            height: 320px;
+            position: relative;
+
+        }
+
+        .shop-img {
+            display: inline-block;
+            /* position: relative; */
+            width: 550px;
+            height: 320px;
+            position: absolute;
+        }
+
+        .shop-img img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        #zoom img::selection {
+            background-color: transparent;
+        }
+
+
+        .btn-container {
+            display: flex;
+            align-items: flex-end;
+            margin-left: 15rem;
+
+        }
+
+        .shop-btn .btn {
+
+            margin-top: 1rem;
+            width: 120px;
+        }
+
+        .shop-list-intro {
+            padding-top: 1rem;
+            height: 500px;
+            margin-bottom: 5rem;
+            border: #77777A 1px solid;
+
+        }
+
+        .intro-r {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        #zoom:after {
+            content: '';
+            display: block;
+            width: 33px;
+            height: 33px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: url(./JS/zoom/icon.png);
+        }
+
+        .shop-wrap {
+            margin-bottom: 10rem;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        a {
+            color: #77777A;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <!--section header -->
+    <section class="header-info container d-flex flex-column flex-lg-row">
+        <!-- shop log-in-->
+        <nav class="nav-sm col-12 col-lg-2">
+            <div class="navlinks">
+
+                <a class="nav-link active" href="#">購物車</a>
+                <a class="nav-link" href="#">電子報</a>
+                <a class="nav-link" href="#">登入</a>
+            </div>
+
+        </nav>
+
+        <!-- logo on head -->
+        <!-- Just an image -->
+        <nav class="nav-header col-12 col-lg-5 mt-5 mt-lg-0  ">
+            <a class="navbar-brand header-img-wrap" href="./index.html">
+                <img src="./webZIGMA_LOGO.gif" width="" height="" alt="">
+            </a>
+        </nav>
+
+
+        <!-- header calendar -->
+
+        <div class="navbar-calendar-wrap col-12 col-lg-5">
+            <h6>Zigma-taipei-2021</h6>
+            <img src="./ibsn.png" alt="">
+            <div class="calender-infobox">
+                <div class="calender-box">
+                    <p>Monday</p>
+                    <div class="calendar-info d-flex">
+
+                        <h5 id="dateNow">Feb 28,2021 </h5>
+
+                        <div class="menu-calendar-col"></div>
+
+                        <div class="menu-weather">
+                            <div class="cloud-wrap">
+                                <!-- <img src="./bk-cloud.gif" alt=""> -->
+                            </div>
+                            <h4>28</h4>
+                            <h8>LOW</h8>
+                        </div>
+                        <div class="menu-calendar-col "></div>
+                        <div class="menu-weather">
+                            <div class="cloud-wrap">
+                                <!-- <img src="./wt-cloud.png" alt=""> -->
+                            </div>
+                            <h4>32</h4>
+                            <h8>HIGHT</h8>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <!-- section menu   -->
+
+    <section class="menu-br2" id="menu-br2">
+        <nav class="btn-lg d-flex navbar-expand-sm navbar-expand-lg navbar-light  ">
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <div class="nav-space-around">
+                    <ul class="navbar-item d-flex list-unstyled  ">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="./magzine.html">MAGZINE <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./columns.html">COLUNMS </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./happenings.html">HAPPENINGS</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </section>
+
+
+
+
+    <!-- index infomation !!!important line!!! -->
+    <div id="aboveAll" class="info container mag-line">
+        <!-- 網頁雜誌線 -->
+
+
+        <!-- section columns - 1 -->
+
+        <section class="columns info-line " id="OLYMPUS_MONS">
+            <div class="text-col">
+                <h6>主要創作者：manual＿for＿all</h6>
+                <h1>OLYMPUS MONS</h1>
+            </div>
+
+            <div class="colums-intro d-flex flex-column flex-lg-row">
+                <div class="colums-text col-12 col-lg-4">
+                    <h6>這個故事所處的時代，月面旅行已經不再是天方夜譚，
+                        也早有登山家成功攀登月球
+                        最高峰惠更尼斯(Mons Huygens)，
+                        自人類成功攀登地球以外的高峰後，
+                        人類對於將冒險擴展至了宇宙。<br>
+
+                        主角在這樣的時代，
+                        欲踏向前人未曾到達的眾神山嶺 – 火星奧林帕斯山。
+                        然而他在最後一哩路產生的致命錯誤，
+                        毀損了關鍵的攀登設備，這將他帶向兩難的抉擇，
+                        需要選擇下徹或處於高風險前進。<br><br>
+
+                        主角在結尾會繼續走去，只是這個方向，
+                        是上攀或下徹，沒人知道，
+                        而這個結局的解讀也會因人而異，
+                        可能會因為時間、心境的變化而有所不同。<br><br>
+
+
+                    </h6>
+                    <a class="list-unstyled d-flex col-icon-wrap">
+                        <h6> manual＿for＿all</h6>
+                        <li><img src="./icon-social-fb.png" alt=""></li>
+                        <li><img src="./icon-social-yt.png" alt=""></li>
+                        <li><img src="./icon-social-tw.png" alt=""></li>
+                    </a>
+
+
+
+                </div>
+                <div class="co-img-wrap"></div>
+                <div class="colums-img col-12 col-lg-8 mt-5 mt-lg-0">
+                    <ul class="list-unstyled d-flex ">
+                        <li><img src="./作品圖檔/vic/87884585_133535501501021_5944405995189960704_o.jpg" alt=""></li>
+                    </ul>
+                </div>
+
+            </div>
+
+
+
+        </section>
+
+
+        <!-- section columns - 2 -->
+
+        <section class="columns info-line " id="goodnight">
+            <div class="text-col">
+                <h6>主要創作者：廖若凡</h6>
+                <h1>晚安 Goodnight</h1>
+            </div>
+
+            <div class="colums-intro d-flex flex-column flex-lg-row">
+                <div class="colums-text col-12 col-lg-4">
+                    <h6> 故事建構於想像中的 2050 年的台北市。
+                        一個平凡如你我的上班族，領著一份剛剛好的月薪，
+                        剛剛好可以付得起一小房間的房租，剛剛好可以負擔伙食，
+                        剛剛好還可以付得起電玩點數，剛剛好月底可以打平一切開銷
+                        ，沒多餘的金錢與時間分給所謂的夢想。<br>
+                        當現實的願景注定無法觸及時，
+                        你會願意花多少代價來沈浸在虛擬的快樂呢？
+                        故事裡的主人翁靠著虛擬世界的慾望來彌補現實世界的匱乏。
+                        卻逐漸發現，無論現實或虛擬，
+                        都填滿不了心裡最深層的洞⋯⋯。<br><br>
+
+                        整篇作品是創作者對周遭人事的觀察，
+                        也描繪了對未來城市樣貌、人類個體心境，
+                        以及人跟人關係的想像。
+                        <br><br>
+
+                    </h6>
+                    <a class="list-unstyled d-flex col-icon-wrap">
+                        <h6> 廖若凡</h6>
+                        <li><img src="./icon-social-fb.png" alt=""></li>
+                        <li><img src="./icon-social-yt.png" alt=""></li>
+                        <li><img src="./icon-social-tw.png" alt=""></li>
+                    </a>
+
+
+
+                </div>
+                <div class="co-img-wrap"></div>
+                <div class="colums-img col-12 col-lg-8 mt-5 mt-lg-0 ">
+                    <ul class="list-unstyled d-flex ">
+                        <li><img src="./作品圖檔/jofan/Goodnight_4-5.png" alt=""></li>
+                    </ul>
+                </div>
+
+            </div>
+
+
+
+        </section>
+
+
+
+
+        <!-- section columns - 3 -->
+
+        <section class="columns info-line " id="Eden">
+            <div class="text-col">
+                <h6>主要創作者：Cinyee</h6>
+                <h1> 伊甸 Eden</h1>
+            </div>
+
+            <div class="colums-intro d-flex flex-column flex-lg-row">
+                <div class="colums-text col-12 col-lg-4">
+                    <h6> 當地球不再適合人居，
+                        你願意成為繼續留下與環境奮鬥的蓋亞派，
+                        還是捨棄肉身活在虛擬世界的伊甸派？
+                        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+                    </h6>
+
+                    <div class="col-social-share">
+                        <a class="list-unstyled d-flex col-icon-wrap">
+                            <h6> Cinyee</h6>
+                            <li><img src="./icon-social-fb.png" alt=""></li>
+                            <li><img src="./icon-social-yt.png" alt=""></li>
+                            <li><img src="./icon-social-tw.png" alt=""></li>
+                        </a>
+                    </div>
+
+
+
+                </div>
+                <div class="co-img-wrap"></div>
+                <div class="colums-img col-12 col-lg-8 mt-5 mt-lg-0">
+                    <ul class="list-unstyled d-flex ">
+                        <li><img src="./作品圖檔/cinyee/p2 final.jpg" alt=""></li>
+                    </ul>
+                </div>
+
+            </div>
+
+
+
+        </section>
+
+        <!-- section columns - 4 -->
+
+        <section class="columns info-line" id="untitled">
+            <div class="text-col">
+                <h6>主要創作者：Jason</h6>
+                <h1>無題 untitled</h1>
+            </div>
+
+            <div class="colums-intro d-flex flex-column flex-lg-row">
+                <div class="colums-text col-12 col-lg-4">
+                    <h6> 甚麼是現實？而我們又是如何定義它？
+                        何謂真？何謂假？
+                        還是一切都是相對的？
+                        「想像你正在墜落，但地面並不存在。」
+
+                        當沒有地面之際，你便失去了墜落之處，
+                        沒有了比較值，你只是漂浮著，
+                        存在於空間裡，橫越無數個維度。
+                        <br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+                    </h6>
+
+                    <div class="col-social-share">
+                        <a class="list-unstyled d-flex col-icon-wrap">
+                            <h6> Jason</h6>
+                            <li><img src="./icon-social-fb.png" alt=""></li>
+                            <li><img src="./icon-social-yt.png" alt=""></li>
+                            <li><img src="./icon-social-tw.png" alt=""></li>
+                        </a>
+                    </div>
+
+
+
+                </div>
+                <div class="co-img-wrap"></div>
+                <div class="colums-img col-12 col-lg-8 mt-5 mt-lg-0">
+                    <ul class="list-unstyled d-flex ">
+                        <li><img src="./作品圖檔/jason/Jason_P.jpg" alt=""></li>
+                    </ul>
+                </div>
+
+            </div>
+
+
+
+        </section>
+
+
+
+        <!-- section columns - 5 -->
+
+        <section class="columns info-line " id="fogs">
+            <div class="text-col">
+                <h6>客座創作者：陳沛珛</h6>
+                <h1>霧 Fogs </h1>
+            </div>
+
+            <div class=" colums-intro d-flex flex-column flex-lg-row">
+                <div class=" colums-text col-12 col-lg-4">
+                    <h6> 關於另一個人的思想和行為模式，
+                        我以為我知道整體，但其實都只是從片段拼湊，
+                        再用想像把其餘部分填滿。
+                        那，加上了我的想像的那個人格，可以算是真實的嗎？
+                        <br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+                    </h6>
+
+                    <div class="col-social-share">
+                        <a class="list-unstyled d-flex col-icon-wrap">
+                            <h6>陳沛珛</h6>
+                            <li><img src="./icon-social-fb.png" alt=""></li>
+                            <li><img src="./icon-social-yt.png" alt=""></li>
+                            <li><img src="./icon-social-tw.png" alt=""></li>
+                        </a>
+                    </div>
+
+
+
+                </div>
+                <div class="co-img-wrap"></div>
+                <div class=" colums-img col-12 col-lg-8 mt-5 mt-lg-0">
+                    <ul class="list-unstyled d-flex ">
+                        <li><img src="./作品圖檔/霧 Fogs  （客座創作者：陳沛珛）/IMG_8602-819x1024.jpg" alt=""></li>
+                    </ul>
+                </div>
+
+            </div>
+
+
+
+        </section>
+
+
+
+
+
+
+        <!--頁尾  -->
+        <!-- section footer -->
+
+        <section class="footer info-line-2  ft-info d-flex ">
+
+
+            <!--購物車 -->
+            <div class="shop container" id="shop-cols">
+                <div class="shop-list-intro flex-col row">
+
+                    <div class="intro-l col-12 col-lg-8">
+                        <h1>Zigma</h1><br>
+                        <h6>作者：奧斯卡 Oscar T/manual_for_all/廖若凡 Jofan Liao Illustration/An Chen Illustration/Cinyee
+                            Chiu/Jason
+                            Chuang</h6><br>
+                        <h6>出版社：布克文化出版事業部<br>
+                            出版日期：2020/7/23</h6><br>
+                    </div>
+
+                    <div class="intro-r flex-col col-12 col-lg-4">
+                        <div class="price">
+                            <h6>原價$800</h6>
+
+                            <h2>會員價79折</h2>
+                            <h3>NT$623</h3>
+                        </div>
+                    </div>
+
+                    <a class="list-unstyled d-flex -icon-wrap">
+                        <li><img src="./icon-social-fb.png" alt=""></li>
+                        <li><img src="./icon-social-yt.png" alt=""></li>
+                        <li><img src="./icon-social-tw.png" alt=""></li>
+                    </a>
+
+
+
+                </div>
+
+                <div class="shop-wrap row">
+                    <div class="shop-imgwrap" id="zoom">
+                        <a class="list-unstyled d-flex shop-img ">
+                            <li><img src="./Zigma雜誌實拍/332A1866-2.jpg" alt=""></li>
+                        </a>
+
+                    </div>
+                    <div class="btn-container">
+                        <div class="shop-btn d-flex flex-column  ">
+                            <button type="button" class="btn btn-dark mt-5 mt-lg-0 ">放入購物車</button>
+                            <button type="button" class="btn btn-dark">直接結帳</button>
+                            <br>
+                            <button type="button" class="btn btn-light mt-5 mt-lg-0 ">收藏清單</button>
+
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+
+
+
+
+            <h1>“與我們一起開創未來”</h1>
+
+            <div class="ft-img-wrap">
+                <img src="./webZIGMA_LOGO.gif" alt="">
+            </div>
+
+
+            <a class="list-unstyled d-flex ft-icon-wrap">
+                <li><img src="./icon-social-fb.png" alt=""></li>
+                <li><img src="./icon-social-yt.png" alt=""></li>
+                <li><img src="./icon-social-tw.png" alt=""></li>
+            </a>
+
+
+            <nav class="navbar-nav navbar-expand-sm navbar-expand-lg navbar-light ">
+
+                <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button> -->
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">關於我們 <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">異業合作 </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">加入ZIG</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">聯絡我們</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">版權聲明</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">ZIGMA MIDEA</a>
+                        </li>
+
+
+                    </ul>
+                </div>
+            </nav>
+
+
+        </section>
+        <div class="footer-bottom"></div>
+    </div>
+    <section class="copyright ft-wrap ft-line">
+        <nav class="navbar-nav navbar-expand-sm navbar-expand-lg navbar-light ">
+
+            <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button> -->
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">©2021 ZIGMA.COM <span class="sr-only">(current)</span></a>
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">ALL RIGHTS RESERVED</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">PRIVACY POLICY</a>
+                    </li>
+
+
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">TERMS OF USE</a>
+                    </li>
+
+
+                </ul>
+            </div>
+        </nav>
+    </section>
+
+
+
+
+    <script src="./JS/jquery-3.5.1.js"></script>
+
+
+    <!-- hearder calendar -->
+    <script>
+        function getFormattedDate(date) {
+            var year = date.getFullYear();
+            var monArray = ['Jun', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
+            var month = date.getMonth();
+            console.log('month', month);
+
+            var day = date.getDate().toString();
+            day = day.length > 1 ? day : '0' + day;
+
+            return monArray[month] + ' ' + day + ', ' + year;
+        }
+        $('#dateNow').text(getFormattedDate(new Date()))
+    </script>
+
+
+    <!-- zoom -->
+
+    <script src='./JS/zoom/jquery.zoom.js'></script>
+    <script>
+        $(document).ready(function () {
+            $('#zoom').zoom();
+
+        });
+
+        var url = window.location.href;
+        var id = url.substring(url.lastIndexOf('#'));
+        $('html, body').animate({ scrollTop: $(id).offset().top - 50 }, 300);
+
+    </script>
+
+
+</body>
+
+</html>

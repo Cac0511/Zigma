@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200;300;400;500;600;700;900&display=swap"
+        rel="stylesheet">
+
+
+    <style>
+        #menu {
+            max-width: 1200px;
+            height: 320px;
+            margin: 0 auto;
+            position: relative;
+            /* background-color: rgb(246, 210, 216) !important; */
+            border-bottom: 9px solid black;
+
+
+        }
+
+        /* #menu-br2{
+            max-width: 1200px;
+            height: 50px;
+            margin: 0 auto;
+            padding: top 100px;
+            background-color: lightblue;
+            border-bottom: 3px solid  #77777A;
+            border-top: 3px solid  #77777A;
+
+
+        } */
+
+        .btn-lg {
+            max-width: 1200px;
+            height: 100%;
+            margin: 0 auto;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: #77777A 3px solid;
+            border-bottom: #77777A 3px solid;
+
+        }
+
+        .nav-link {
+            font-family: 'Noto Serif TC', serif;
+        }
+
+        .navbar-item .nav-link {
+            color: #77777A !important;
+
+        }
+
+
+        .mag-line {
+            max-width: 1200px;
+            margin-top: 3rem;
+            margin-bottom: 1rem;
+
+            border: black 6px solid;
+            /* height: 1000vh; */
+
+
+        }
+
+        .info-line {
+            padding: 3rem;
+            max-width: 1000px;
+            margin: 0 auto;
+            /* index slider*/
+            border-bottom: #77777A 3px solid;
+
+
+        }
+
+
+        .info-line-2 {
+            max-width: 1000px;
+            /* index slider*/
+            margin-top: 3rem;
+            padding-bottom: 3rem;
+            border-bottom: #77777A 3px solid;
+            border-top: #77777A 3px solid;
+
+
+
+        }
+
+        .navbar {
+
+            height: 300px;
+            position: absolute;
+            left: 0;
+            margin-top: 0;
+            overflow: hidden;
+        }
+
+
+
+        .navbar-brand img {
+            width: 50rem;
+            height: 100%;
+            object-fit: cover;
+
+
+
+        }
+
+        /* 
+        .menu-buttom {
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #77777A;
+            padding: 5px 5px 5px;
+            left: 0;
+            color: #77777A;
+
+        } */
+
+        p {
+            margin-bottom: 0;
+        }
+
+
+        .navbar-calendar {
+            height: 100px;
+            width: 100%;
+
+        }
+
+        .navbar-calendar img {
+            height: 100%;
+
+        }
+
+        .navbar-calendar-wrap {
+            font-family: 'Noto Serif TC', serif;
+        }
+
+        .menu-calendar-col {
+            width: 2px;
+            height: 50px;
+            background-color: #77777A;
+            margin-left: 30px;
+
+        }
+
+
+        .menu-weather {
+            margin: 0 auto;
+            margin-left: 20px;
+
+
+        }
+
+
+
+
+        .wrap-carousel {
+            max-width: 1000px;
+            height: 500px;
+            overflow: hidden;
+            position: relative;
+            margin: 0 auto;
+
+        }
+
+        .img-wrap-carousel {
+            width: 5000px;
+            height: 500px;
+            position: absolute;
+            transition: 1.9s;
+
+        }
+
+        .img-wrap-carousel img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+
+
+
+        .img-wrap {
+            max-width: 1000px;
+            height: 400px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+
+
+        }
+
+        .img-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .slider {
+            font-family: 'Noto Serif TC', serif;
+        }
+
+        .slider h5 {
+            font-family: 'Noto Serif TC', serif;
+            margin-top: 3rem;
+        }
+
+        .slider-dots {
+            list-style-type: none;
+            margin-top: 3rem;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .slider-dots li {
+            width: 40px;
+            height: 10px;
+            margin: 0 5px;
+            background-color: #77777A;
+            border-radius: 30%;
+        }
+
+        .fc-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .fc-info h2 {
+            font-family: 'Noto Serif TC', serif;
+            padding-top: 2rem;
+            padding-bottom: 3rem;
+            margin: 0 auto;
+        }
+
+        .fc-info h6 {
+            font-family: 'Noto Serif TC', serif;
+            padding-top: 6rem;
+            margin: 0 auto;
+        }
+
+        .fc-img .wrap {
+            max-width: 100%;
+            height: 400px;
+            overflow: hidden;
+            position: relative;
+            margin: 0 auto;
+        }
+
+        .fc-img .img-wrap {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+
+        }
+
+        .fc-img .img-wrap img {
+
+            width: 80px;
+            height: 100px;
+            margin: 1rem;
+            object-fit: cover;
+        }
+
+
+        .article-wrap {
+            margin-top: 5rem;
+            max-width: 300px;
+            height: 100%;
+
+
+        }
+
+        .article-right {
+            margin-top: 5rem;
+            max-width: 100%;
+            height: 100%;
+
+        }
+
+
+
+        .article-wrap h6 {
+            font-family: 'Noto Serif TC', serif;
+            border-bottom: 3px solid #77777A;
+            padding-bottom: 1rem;
+            margin-bottom: 5rem;
+
+        }
+
+
+
+        .article-line {
+            margin-top: 5rem;
+            border-right: 3px solid #77777A;
+
+
+        }
+
+        .article .img-wrap img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+
+        }
+
+        .article-content {
+            font-family: 'Noto Serif TC', serif;
+            margin-top: 5rem;
+            padding-bottom: 4rem;
+            border-bottom: 3px solid #77777A;
+        }
+
+        .article-info-r-f {
+            font-family: 'Noto Serif TC', serif;
+        }
+
+        .article-content-footer {
+            margin-top: 5rem;
+
+        }
+
+        .article-content-footer img {
+            border: 1px #77777A solid;
+
+        }
+
+
+
+
+        .footer {
+            display: flex;
+            flex-direction: column;
+            padding-top: 10rem;
+            padding-bottom: 15px;
+            margin: 0 auto;
+
+        }
+
+        .ft-info {
+            height: 100%;
+            width: 100%;
+        }
+
+        .ft-info h1 {
+            font-family: 'Noto Serif TC', serif;
+            margin: 0 auto;
+        }
+
+        .ft-img-wrap {
+            padding-top: 15rem;
+            height: 100%;
+            width: 100%;
+            position: relative;
+            /* overflow: hidden; */
+        }
+
+        .ft-img-wrap img {
+            height: 300px;
+            width: 100%;
+            position: absolute;
+            object-fit: cover;
+
+        }
+
+
+        .ft-icon-wrap {
+            padding-top: 20rem;
+            padding-bottom: 5rem;
+            margin: 0 auto;
+            /* overflow: hidden; */
+        }
+
+        .ft-icon-wrap img {
+
+            height: 100%;
+            width: 50px;
+            object-fit: cover;
+
+
+        }
+
+
+        .navbar-nav {
+
+            display: flex;
+            font-size: 20px;
+            margin: 0 auto;
+
+
+        }
+
+
+        .footer-bottom {
+            padding-bottom: 5rem;
+        }
+
+        .ft-wrap {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .ft-line {
+            width: 100%;
+            border-top: #77777A 3px solid;
+            border-bottom: #77777A 3px solid;
+            margin-bottom: 1rem;
+        }
+
+        .header-info {
+            max-width: 1200px;
+            margin-top: 1rem;
+        }
+
+
+
+        .nav-link {
+            color: #77777A !important;
+        }
+
+        .nav-header {
+
+            position: relative;
+
+
+        }
+
+        .header-img-wrap {
+            top: 0;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+
+        }
+
+        .header-img-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .navbar-calendar-wrap {
+            width: 100%;
+
+        }
+
+        .happenings {
+            display: flex;
+            flex-direction: column;
+            padding-top: 3rem;
+            padding-bottom: 15px;
+            margin: 0 auto;
+            max-width: 1000px;
+
+        }
+
+
+        .eve-info {
+            height: 100%;
+            width: 100%;
+        }
+
+        .eve-info h1 {
+            font-family: 'Noto Serif TC', serif;
+
+            margin: 0 auto;
+            padding-top: 3rem;
+        }
+
+        .eve-info h2 {
+            font-family: 'Noto Serif TC', serif;
+            margin: 0 auto;
+            padding-top: 1rem;
+        }
+
+        .eve-info h6 {
+            font-family: 'Noto Serif TC', serif;
+            margin: 0 auto;
+            padding-top: 3rem;
+            margin-bottom: 5rem;
+        }
+
+
+        .eve-intro {
+            margin-top: 5rem;
+
+        }
+
+        .card {
+            margin-right: 3rem;
+        }
+
+        .card-text {
+            font-family: 'Noto Serif TC', serif;
+        }
+
+        .classic-btn {
+            margin: 0 auto;
+            width: 150px;
+            margin-top: 5rem;
+            margin-bottom: 1rem;
+            font-family: 'Noto Serif TC', serif;
+        }
+
+        .navlinks {
+            margin-top: 2rem;
+            border: #77777A 1px solid;
+        }
+
+        .featured-columns {
+            height: 100%;
+            max-width: 1000px;
+        }
+
+        .nav-space-around {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+
+        }
+
+        .calendar-info h5 {
+            margin-top: 1rem;
+        }
+
+        .intro-l {
+            max-width: 1000px;
+        }
+
+        .intro-r {
+            max-width: 1000px;
+        }
+
+        a {
+            color: #77777A;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <!--section header -->
+    <section class="header-info container d-flex flex-column flex-lg-row">
+        <!-- shop log-in-->
+        <nav class="nav-sm col-12 col-lg-2">
+            <div class="navlinks">
+
+                <a class="nav-link active" href="#">購物車</a>
+                <a class="nav-link" href="#">電子報</a>
+                <a class="nav-link" href="#">登入</a>
+            </div>
+
+        </nav>
+
+        <!-- logo on head -->
+        <!-- Just an image -->
+        <nav class="nav-header col-12 col-lg-5 mt-5 mt-lg-0  ">
+            <a class="navbar-brand header-img-wrap" href="./index.html">
+                <img src="./webZIGMA_LOGO.gif" width="" height="" alt="">
+            </a>
+        </nav>
+
+
+        <!-- header calendar -->
+
+        <div class="navbar-calendar-wrap col-12 col-lg-5">
+            <h6>Zigma-taipei-2021</h6>
+            <img src="./ibsn.png" alt="">
+            <div class="calender-infobox">
+                <div class="calender-box">
+                    <p>Monday</p>
+                    <div class="calendar-info d-flex">
+
+                        <h5 id="dateNow">Feb 28,2021 </h5>
+
+                        <div class="menu-calendar-col"></div>
+
+                        <div class="menu-weather">
+                            <div class="cloud-wrap">
+                                <!-- <img src="./bk-cloud.gif" alt=""> -->
+                            </div>
+                            <h4>28</h4>
+                            <h8>LOW</h8>
+                        </div>
+                        <div class="menu-calendar-col "></div>
+                        <div class="menu-weather">
+                            <div class="cloud-wrap">
+                                <!-- <img src="./wt-cloud.png" alt=""> -->
+                            </div>
+                            <h4>32</h4>
+                            <h8>HIGHT</h8>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <!-- section menu   -->
+
+    <section class="menu-br2" id="menu-br2">
+        <nav class="btn-lg d-flex navbar-expand-sm navbar-expand-lg navbar-light  ">
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <div class="nav-space-around">
+                    <ul class="navbar-item d-flex list-unstyled  ">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="./magzine.html" id="mag">MAGZINE <span
+                                    class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./columns.html" id="cols">COLUNMS </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./happenings.html" id="eves">HAPPENINGS</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </section>
+
+
+
+    <!-- index infomation !!!important line!!! -->
+    <div class="info container mag-line">
+
+        <!-- section slider -->
+
+        <section class="slider info-line">
+            <h6>創刊號</h6>
+            <h1>虛擬現實</h1>
+            <div class="wrap-carousel">
+                <ul class="list-unstyled d-flex img-wrap-carousel">
+                    <li><img src="./Zigma雜誌實拍/332A1866-2.jpg" alt=""></li>
+                    <li><img src="./Zigma雜誌實拍/332A1903-5.jpg" alt=""></li>
+                    <li><img src="./Zigma雜誌實拍/332A1932-8.jpg" alt=""></li>
+                    <li><img src="./Zigma雜誌實拍/332A1944-10.jpg" alt=""></li>
+                    <li><img src="./Zigma雜誌實拍/332A1977-14.jpg" alt=""></li>
+                </ul>
+
+
+
+
+
+            </div>
+            <h5>《Zigma》是一本以創作者為核心的科幻圖像小說雜誌，刊物名來自於數學的求和符號 Σ，由奧斯卡發起<a href="./magzine.html">....more</a> </h5>
+            <ul class="slider-dots">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </section>
+
+
+        <!--section featured columns -->
+
+        <section class="featured-columns info-line-2 container d-flex flex-column flex-lg-row ">
+            <div class="fc-info col-12 col-lg-5 mt-5 mt-lg-0">
+                <h2>Featured columns</h2>
+                <h2>作者專欄</h2>
+                <button type="button" class="classic-btn btn btn-outline-dark"><a href="./columns.html"> READ
+                        MORE</a></button>
+
+
+            </div>
+
+            <div class="fc-img col-12 col-lg-7 mt-0 mt-lg-0">
+                <ul class="list-unstyled d-flex img-wrap">
+                    <li><a href="./index.html#eden"> <img src="./作品圖檔/an/p1_f.jpg" alt=""></a></li>
+                    <li><a href="./index.html#cinyee"><img src="./作品圖檔/cinyee/p1 final.jpg" alt=""></a></li>
+
+                    <li><a href="./index.html#jason"><img src="./作品圖檔/jason/Jason_P.jpg" alt=""></a></li>
+                    <li><a href="./index.html#jofan"><img src="./作品圖檔/jofan/Goodnight_1.png" alt=""></a></li>
+                    <li><a href="./index.html#oscar"><img src="./作品圖檔/oscar/p1.jpg" alt=""></a></li>
+                    <li><a href="./columns.html#fogs"><img src="./作品圖檔/peihsiu/1.jpg" alt=""></a></li>
+                    <li><a href="./index.html#vic"><img
+                                src="./作品圖檔/vic/87884585_133535501501021_5944405995189960704_o.jpg" alt=""></a></li>
+                </ul>
+            </div>
+
+        </section>
+
+
+
+        <!--section article -->
+
+        <section class="article container d-flex info-line">
+
+            <div class="article-wrap col-5 img-wrap ">
+                <ul class="list-unstyled">
+                    <li id="vic"><a href="./columns.html#OLYMPUS_MONS"><img
+                                src="/作品圖檔/vic/87884585_133535501501021_5944405995189960704_o.jpg" alt=""></a></li>
+                </ul>
+                <h6>這個故事所處的時代，月面旅行已經不再是天方夜譚，也早有登山家成功攀登月球最高峰惠更尼斯(Mons Huygens)，自人類成功攀登地球以外的高峰後，人類對於將冒險擴展至了宇宙。</h6>
+
+
+                <ul class="list-unstyled">
+                    <li id="jofan"><a href="./columns.html#goodnight"> <img src="./作品圖檔/jofan/Goodnight_2-3.png"
+                                alt=""></a></li>
+                </ul>
+                <h6>故事建構於想像中的 2050
+                    年的台北市。一個平凡如你我的上班族，領著一份剛剛好的月薪，剛剛好可以付得起一小房間的房租，剛剛好可以負擔伙食，剛剛好還可以付得起電玩點數，剛剛好月底可以打平一切開銷，沒多餘的金錢與時間分給所謂的夢想。
+                </h6>
+
+
+                <ul class="list-unstyled">
+                    <li id="eden"><a href="./columns.html#Eden"><img src="/作品圖檔/an/p3_f.jpg" alt=""></a></li>
+                </ul>
+                <h6>在這個不知道地球還存不存在的光年，人腦產生的多巴胺成為珍貴的能源，人類成為牲口，一批一批被養在外星物種製造的快樂農場裡。</h6>
+
+
+                <ul class="list-unstyled">
+                    <li id="cinyee"><a href="./columns.html#untitled"><img src="/作品圖檔/cinyee/p2 final.jpg" alt=""></a>
+                    </li>
+                </ul>
+                <h6>當地球不再適合人居，你願意成為繼續留下與環境奮鬥的蓋亞派，還是捨棄肉身活在虛擬世界的伊甸派？</h6>
+
+
+
+
+            </div>
+
+
+            <div class="article-line"></div>
+
+
+            <div class="article-right col-7 img-wrap">
+                <ul class="list-unstyled">
+                    <li id="oscar"><a href="./columns.html#shop-cols"><img src="/作品圖檔/oscar/p1.jpg" alt=""></a></li>
+                </ul>
+
+                <div class="article-content d-flex">
+                    <div class="article-info-l col-6">
+                        <h4>演員 The Actress（主要創作者/計畫發起人：奧斯卡）</h4>
+                        <h6>
+                            主角卡麗，8年前來到泰利市追尋當演員的夢想，卻在生活的逼迫下，當起了上班族。當她服用Ideal將自己上傳到精神網路，她搭建起一個舞台，演著一齣齣的戲，這是卡麗曾經的夢想，但隨服用次數增加，事態也逐漸失控。
+                        </h6>
+                    </div>
+                    <div class="article-info-r col-6">
+                        <h6>Ideal 是一個理想藥，它的發明彌補了人在現實無法實現的缺憾，對憂鬱的治療大大提升，但使用過量可能讓人分不清精神網路與現實，最嚴重的情況是，人將被困在精神網路中。</h6>
+                        <h6>在現實裡演戲，在戲裡做自己，究竟哪邊才是真的?這是一個對所有追尋理想的人的溫柔故事，即使世界崩潰，你仍不孤單。</h6>
+                    </div>
+                </div>
+
+                <div class="article-content-footer d-flex ">
+                    <div class="article-info-l-f col-6">
+                        <ul class="list-unstyled">
+                            <li id="jason"><img src="./作品圖檔/jason/Jason_P.jpg" alt=""></li>
+                        </ul>
+                    </div>
+
+                    <div class="article-info-r-f col-6">
+                        <h6>甚麼是現實？而我們又是如何定義它？何謂真？何謂假？還是一切都是相對的？「想像你正在墜落，但地面並不存在。」</h6>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!--section happenings-->
+
+        <section class="happenings eve-info d-flex">
+            <h1>Happenings</h1>
+            <h2>近期事件</h2>
+
+            <div class="eve-intro d-flex">
+                <div class="card" style="width: 18rem; ">
+                    <a href="./happenings.html#eve_1">
+                        <img src="./happenings/１.jpg" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-text">字行間的空白地區 - 淺談報紙/媒體插畫 </h5>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="card" style="width: 18rem;">
+                    <a href="./happenings.html#eve_2">
+                        <img src="./happenings/2.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-text">Zigma創刊講座｜科幻＋圖像創作＋刊物製造 </h5>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="card" style="width: 18rem;">
+                    <a href="./happenings.html#eve_4">
+                        <img src="./happenings/３.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-text">在創作之間 - 我選擇不服輸 </h5>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="card" style="width: 18rem;">
+                    <a href="./happenings.html#eve_3">
+                        <img src="./happenings/４.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-text">Zigma 主要創作者系列講座 – 插畫 X 媒體 X 個人創作</h5>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+
+
+            <button type="button" class="classic-btn btn btn-outline-dark"><a href="./happenings.html"> MORE EVENTS
+                </a></button>
+
+
+        </section>
+
+
+        <!-- section footer -->
+
+        <section class="footer info-line-2  ft-info d-flex ">
+            <h1>“與我們一起開創未來”</h1>
+            <div class="ft-img-wrap">
+                <img src="./webZIGMA_LOGO.gif" alt="">
+            </div>
+
+
+            <a class="list-unstyled d-flex ft-icon-wrap">
+                <li><img src="./icon-social-fb.png" alt=""></li>
+                <li><img src="./icon-social-yt.png" alt=""></li>
+                <li><img src="./icon-social-tw.png" alt=""></li>
+            </a>
+
+
+            <nav class="navbar-nav navbar-expand-sm navbar-expand-lg navbar-light ">
+
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">關於我們 <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">異業合作 </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">加入ZIG</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">聯絡我們</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">版權聲明</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">ZIGMA MIDEA</a>
+                        </li>
+
+
+                    </ul>
+                </div>
+            </nav>
+
+
+        </section>
+
+
+
+        <div class="footer-bottom"></div>
+    </div>
+    </section>
+
+
+    <section class="copyright ft-wrap ft-line">
+        <nav class="navbar-nav navbar-expand-sm navbar-expand-lg navbar-light  ">
+
+            <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button> -->
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">©2021 ZIGMA.COM <span class="sr-only">(current)</span></a>
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">ALL RIGHTS RESERVED</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">PRIVACY POLICY</a>
+                    </li>
+
+
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">TERMS OF USE</a>
+                    </li>
+
+
+                </ul>
+            </div>
+        </nav>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="./JS/jquery-3.5.1.js"></script>
+    <script>
+        // index carousel auto player
+        let page = 0
+
+        $('.slider-dots li').hover(function () {
+            console.log('hi', $(this));
+            console.log($(this).index());
+
+            $(this)
+                .css('background', '#fff')
+                .siblings()
+                .css('background', 'transparent');
+
+            $('.img-wrap-carousel')
+                .css('left', $(this)
+                    .index() * -1000 + 'px');
+        })
+
+        $('li').click(function () {
+            console.log($(this).index());
+        })
+
+
+        setInterval(() => {
+            page = page + 1;
+            if (page >= 5) {
+                page = 0;
+            }
+            $('.img-wrap-carousel').css('left', page * -1000 + 'px');
+            console.log('page=', page);
+        }, 3000);
+
+        //   index carousel auto player (end)
+
+
+    </script>
+
+    <script>
+        function getFormattedDate(date) {
+            var year = date.getFullYear();
+            var monArray = ['Jun', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
+            var month = date.getMonth();
+            console.log('month', month);
+
+            var day = date.getDate().toString();
+            day = day.length > 1 ? day : '0' + day;
+
+            return monArray[month] + ' ' + day + ', ' + year;
+        }
+        $('#dateNow').text(getFormattedDate(new Date()))
+
+
+
+
+        var url = window.location.href;
+        var id = url.substring(url.lastIndexOf('#'));
+        $('html, body').animate({ scrollTop: $(id).offset().top - 50 }, 300);
+
+    </script>
+</body>
+
+</html>

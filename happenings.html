@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>happenings</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200;300;400;500;600;700;900&display=swap"
+        rel="stylesheet">
+
+
+    <style>
+        /* important line */
+        .mag-line {
+            max-width: 1200px;
+            margin-top: 3rem;
+            margin-bottom: 1rem;
+
+            border: black 6px solid;
+            /* height: 1000vh; */
+
+
+        }
+
+        .info-line {
+            padding: 3rem;
+            max-width: 1000px;
+            margin: 0 auto;
+            /* index slider*/
+            border-bottom: #77777A 3px solid;
+
+
+        }
+
+
+        .info-line-2 {
+            max-width: 1000px;
+            /* index slider*/
+            margin-top: 3rem;
+            padding-bottom: 3rem;
+            border-bottom: #77777A 3px solid;
+            border-top: #77777A 3px solid;
+
+
+
+        }
+
+        .navbar {
+
+            height: 300px;
+            position: absolute;
+            left: 0;
+            margin-top: 0;
+            overflow: hidden;
+        }
+
+
+
+        .navbar-brand img {
+            width: 50rem;
+            height: 100%;
+            object-fit: cover;
+
+
+
+        }
+
+
+        p {
+            margin-bottom: 0;
+        }
+
+
+        .navbar-calendar {
+            height: 100px;
+            width: 100%;
+
+        }
+
+        .navbar-calendar img {
+            height: 100%;
+
+        }
+
+        .navbar-calendar-wrap {
+            font-family: 'Noto Serif TC', serif;
+        }
+
+        .menu-calendar-col {
+            width: 2px;
+            height: 50px;
+            background-color: #77777A;
+            margin-left: 30px;
+
+        }
+
+
+        .menu-weather {
+            margin: 0 auto;
+            margin-left: 20px;
+
+
+        }
+
+
+
+
+        /* footer style */
+
+
+        .footer {
+            display: flex;
+            flex-direction: column;
+            padding-top: 10rem;
+            padding-bottom: 15px;
+            margin: 0 auto;
+            font-family: 'Noto Serif TC', serif;
+
+
+        }
+
+        .ft-info {
+            height: 100%;
+            width: 100%;
+        }
+
+        .ft-info h1 {
+            font-family: 'Noto Serif TC', serif;
+            margin: 0 auto;
+        }
+
+        .ft-img-wrap {
+            padding-top: 15rem;
+            height: 100%;
+            width: 100%;
+            position: relative;
+            /* overflow: hidden; */
+        }
+
+        .ft-img-wrap img {
+            height: 300px;
+            width: 100%;
+            position: absolute;
+            object-fit: cover;
+
+        }
+
+
+        .ft-icon-wrap {
+            padding-top: 20rem;
+            padding-bottom: 5rem;
+            margin: 0 auto;
+            /* overflow: hidden; */
+        }
+
+        .ft-icon-wrap img {
+
+            height: 100%;
+            width: 50px;
+            object-fit: cover;
+
+
+        }
+
+
+        .navbar-nav {
+
+            display: flex;
+            font-size: 20px;
+            margin: 0 auto;
+
+
+        }
+
+
+        .footer-bottom {
+            padding-bottom: 5rem;
+        }
+
+        .ft-wrap {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .ft-line {
+            width: 100%;
+            border-top: #77777A 3px solid;
+            border-bottom: #77777A 3px solid;
+            margin-bottom: 1rem;
+        }
+
+
+
+
+        /* section columns 從這寫 不含頁尾頁首 */
+        .eves {
+            max-width: 1000px;
+            font-family: 'Noto Serif TC', serif;
+
+        }
+
+        .eves-text {
+            margin-top: 10px;
+            margin-bottom: 3rem;
+        }
+
+
+
+
+        .eves-img {
+            display: flex;
+            align-items: center;
+
+            height: 300px;
+            width: 400px;
+
+
+
+            /* position: absolute; */
+            /* overflow: hidden; */
+
+        }
+
+        .eves-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+
+
+
+        }
+
+        .eves-img {
+
+            width: 100%;
+        }
+
+
+        /* header style */
+
+        #menu {
+            max-width: 1200px;
+            height: 320px;
+            margin: 0 auto;
+            position: relative;
+            /* background-color: rgb(246, 210, 216) !important; */
+            border-bottom: 9px solid black;
+
+
+        }
+
+
+
+        .header-info {
+            max-width: 1200px;
+            margin-top: 1rem;
+        }
+
+        .nav-link {
+            color: #77777A !important;
+        }
+
+        .nav-header {
+
+            position: relative;
+
+
+        }
+
+        .header-img-wrap {
+            top: 0;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+
+        }
+
+        .header-img-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .navbar-calendar-wrap {
+            width: 100%;
+
+        }
+
+        .btn-lg {
+            max-width: 1200px;
+            height: 100%;
+            margin: 0 auto;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: #77777A 3px solid;
+            border-bottom: #77777A 3px solid;
+
+        }
+
+        .nav-link {
+            font-family: 'Noto Serif TC', serif;
+        }
+
+        .navbar-item .nav-link {
+            color: #77777A !important;
+
+        }
+
+        .navlinks {
+            margin-top: 2rem;
+            border: #77777A 1px solid;
+        }
+
+
+        .nav-space-around {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+
+        }
+
+        .calendar-info h5 {
+            margin-top: 1rem;
+        }
+
+        /* footer購物車 */
+        .shop-list {
+
+            max-width: 1000px;
+            margin-bottom: 10rem;
+            font-family: 'Noto Serif TC', serif;
+
+        }
+
+        .shop-imgwrap {
+            width: 550px;
+            height: 320px;
+            position: relative;
+
+        }
+
+        .shop-img {
+            display: inline-block;
+            /* position: relative; */
+            width: 550px;
+            height: 320px;
+            position: absolute;
+        }
+
+        .shop-img img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        #zoom img::selection {
+            background-color: transparent;
+        }
+
+
+        .btn-container {
+            display: flex;
+            align-items: flex-end;
+            margin-left: 15rem;
+
+        }
+
+        .shop-btn .btn {
+
+            margin-top: 1rem;
+            width: 120px;
+        }
+
+        .shop-list-intro {
+            padding-top: 1rem;
+            height: 500px;
+            margin-bottom: 5rem;
+            border: #77777A 1px solid;
+
+        }
+
+        .intro-r {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        #zoom:after {
+            content: '';
+            display: block;
+            width: 33px;
+            height: 33px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: url(./JS/zoom/icon.png);
+        }
+
+        .shop-wrap {
+            margin-bottom: 10rem;
+        }
+
+        a {
+            color: #77777A;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <!--section header -->
+    <section class="header-info container d-flex flex-column flex-lg-row">
+        <!-- shop log-in-->
+        <nav class="nav-sm col-12 col-lg-2">
+            <div class="navlinks">
+
+                <a class="nav-link active" href="#">購物車</a>
+                <a class="nav-link" href="#">電子報</a>
+                <a class="nav-link" href="#">登入</a>
+            </div>
+
+        </nav>
+
+        <!-- logo on head -->
+        <!-- Just an image -->
+        <nav class="nav-header col-12 col-lg-5 mt-5 mt-lg-0  ">
+            <a class="navbar-brand header-img-wrap" href="./index.html">
+                <img src="./webZIGMA_LOGO.gif" width="" height="" alt="">
+            </a>
+        </nav>
+
+
+        <!-- header calendar -->
+
+        <div class="navbar-calendar-wrap col-12 col-lg-5">
+            <h6>Zigma-taipei-2021</h6>
+            <img src="./ibsn.png" alt="">
+            <div class="calender-infobox">
+                <div class="calender-box">
+                    <p>Monday</p>
+                    <div class="calendar-info d-flex">
+
+                        <h5 id="dateNow">Feb 28,2021 </h5>
+
+                        <div class="menu-calendar-col"></div>
+
+                        <div class="menu-weather">
+                            <div class="cloud-wrap">
+                                <!-- <img src="./bk-cloud.gif" alt=""> -->
+                            </div>
+                            <h4>28</h4>
+                            <h8>LOW</h8>
+                        </div>
+                        <div class="menu-calendar-col "></div>
+                        <div class="menu-weather">
+                            <div class="cloud-wrap">
+                                <!-- <img src="./wt-cloud.png" alt=""> -->
+                            </div>
+                            <h4>32</h4>
+                            <h8>HIGHT</h8>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <!-- section menu   -->
+
+    <section class="menu-br2" id="menu-br2">
+        <nav class="btn-lg d-flex navbar-expand-sm navbar-expand-lg navbar-light  ">
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <div class="nav-space-around">
+                    <ul class="navbar-item d-flex list-unstyled  ">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="./magzine.html">MAGZINE <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./columns.html">COLUNMS </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./happenings.html">HAPPENINGS</a>
+                        </li>
+
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </section>
+
+
+
+
+    <!-- index infomation !!!important line!!! -->
+    <div class="info container mag-line">
+        <!-- 網頁雜誌線 -->
+
+
+        <!-- section happenings - 1 -->
+
+        <section class="eves info-line " id="eve_1">
+            <div class="eves-text">
+                <h6>SUNDAY, 30 AUGUST 2020 FROM 14:30 UTC+08-16:00 UTC+08
+                </h6>
+                <h1>OLYMPUS MONS （主要創作者：manual＿for＿all）</h1>
+
+            </div>
+
+            <div class="eves-intro d-flex flex-column flex-lg-row">
+
+
+                <div class="eves-img col-12 col-lg-7 mt-5 mt-lg-0">
+                    <ul class="list-unstyled d-flex ">
+                        <li><img src="./happenings/１.jpg" alt=""></li>
+                    </ul>
+                </div>
+
+                <div class="eves-text col-12 col-lg-5">
+
+                    <h6>字行間的空白地區 - 淺談報紙/媒體插畫
+                        講者：Jofan Liao Illustration 廖若凡
+                        日期：2020.08.30（週日）14:30-16:00
+                        地點：童里繪本洋行
+                        費用：300元（限額30人）
+                        <br><br>
+                        插畫家將以回顧這幾年身為一位專職的
+                        插畫設計師的心得歷程為初始，
+                        帶入插畫領域裡的Editorial Illustration，
+                        並分享幾幅相關的作品，
+                        剖析背後從搜集點子至完稿的創作過程。<br>
+                        Editorial Illustration為插畫領域裡的一大類別，
+                        意思為：帶有觀點的插畫。<br><br>
+                        通常與報導文章或短篇散文做搭配，
+                        目的是為了讓觀者更直接明瞭文章所闡述的重點，
+                        也運用圖像補足文字較無法觸及的想像部分。
+
+                        <br><br><br>
+
+
+                    </h6>
+                    <a class="list-unstyled d-flex col-icon-wrap">
+                        <h6>童里繪本洋行 Maison Temps-Rêves</h6>
+                        <li><img src="./icon-social-fb.png" alt=""></li>
+                        <li><img src="./icon-social-yt.png" alt=""></li>
+                        <li><img src="./icon-social-tw.png" alt=""></li>
+                    </a>
+
+
+
+                </div>
+
+
+            </div>
+
+
+
+        </section>
+
+        <!-- section happenings - 2 -->
+
+        <section class="eves info-line " id="eve_2">
+            <div class="eves-text">
+                <h6>SUNDAY, 30 AUGUST 2020 FROM 14:30 UTC+08-16:00 UTC+08
+                </h6>
+                <h1>Zigma 主要創作者系列講座 – 插畫 X 媒體 X 個人創作</h1>
+            </div>
+
+
+            <div class="eves-intro d-flex flex-column flex-lg-row">
+
+
+                <div class="eves-img col-12 col-lg-7 mt-5 mt-lg-0">
+                    <ul class="list-unstyled d-flex ">
+                        <li><img src="./happenings/2.jpg" alt=""></li>
+                    </ul>
+                </div>
+
+                <div class="eves-text col-12 col-lg-5">
+
+                    <h6>
+                        ▍奧斯卡｜在創作之間 – 我選擇不服輸
+                        日期：2020.08.02（週日）14:30-16:00
+                        報名連結：https://reurl.cc/AqVzXp
+
+                        <br><br><br>
+                        ▍An Chen illustration
+                        ｜方形圓形三角形 。來用幾何形畫畫！
+                        日期：2020.08.16（週日）14:30-16:00
+                        報名連結：https://reurl.cc/exRZam
+
+                        <br><br><br>
+                        ▍插畫使用指南 | manual_for_all與黃銘彰的午後對談
+                        講者：manual_for_all ＆ 黃銘彰
+                        日期：2020.08.23（週日）14:30-16:00
+                        報名連結：https://reurl.cc/8GEOM7
+                        <br><br><br>
+
+                        ▍廖若凡｜字行間的空白地區 - 淺談報紙/媒體插畫
+                        日期：2020.08.30（週日）14:30-16:00
+                        報名連結：https://reurl.cc/1x6p7Y
+
+                        <br><br><br>
+
+                    </h6>
+                    <a class="list-unstyled d-flex col-icon-wrap">
+
+                        <h6>童里繪本洋行 Maison Temps-Rêves
+                        </h6>
+
+                        <li><img src="./icon-social-fb.png" alt=""></li>
+                        <li><img src="./icon-social-yt.png" alt=""></li>
+                        <li><img src="./icon-social-tw.png" alt=""></li>
+                    </a>
+
+
+
+                </div>
+
+
+            </div>
+
+
+
+        </section>
+
+        <!-- section happenings - 3 -->
+
+        <section class="eves info-line " id="eve_3">
+            <div class="eves-text">
+                <h6>SATURDAY, 11 JULY 2020 FROM 19:30 UTC+08-21:00 UTC+08
+                </h6>
+                <h1>Zigma創刊講座｜科幻＋圖像創作＋刊物製造
+                </h1>
+            </div>
+
+
+            <div class="eves-intro d-flex flex-column flex-lg-row">
+
+
+                <div class="eves-img col-12 col-lg-7 mt-5 mt-lg-0">
+                    <ul class="list-unstyled d-flex ">
+                        <li><img src="./happenings/４.jpg" alt=""></li>
+                    </ul>
+                </div>
+
+                <div class="eves-text col-12 col-lg-5">
+
+                    <h6>
+                        《Zigma》是一本以創作者為核心的科幻圖像小說雜誌，
+                        刊物名來自於數學的求和符號 Σ，由奧斯
+                        卡發起，manual_for_all、廖若凡、An Chen
+                        等7位創作者共同創作，第一階段以半年刊形
+                        式發行四期，中英
+                        文雙語呈現，用實驗性、創新的精神打造原創圖像故事內容。
+                        創刊號以虛擬現實為主題，以科幻側寫人性，
+                        從未知中探索並預見未來，不一樣的圖像創作正在發生
+                        <br>
+
+                        一起來聽《Zigma》從無到有的策畫
+                        過程，以及4位主要創作者的創作故事<br><br><br>
+                        講座資訊｜＃免費參加
+                        時間｜2020/07/11（六）19:30 - 21:00
+                        <br>
+                        <br>
+                        地點｜青鳥書店（台北市中正區八德路一段1號2樓）<br>
+                        講者簡介｜奥斯卡 + manual_for_al
+                        l + An Chen Illustration + 廖若凡
+
+                        <br><br><br>
+
+                    </h6>
+                    <a class="list-unstyled d-flex col-icon-wrap">
+                        <h6>Free · 青鳥 Bleu&Book
+                        </h6>
+                        <li><img src="./icon-social-fb.png" alt=""></li>
+                        <li><img src="./icon-social-yt.png" alt=""></li>
+                        <li><img src="./icon-social-tw.png" alt=""></li>
+                    </a>
+
+
+
+                </div>
+
+
+            </div>
+
+
+
+        </section>
+
+
+        <!-- section happenings - 4 -->
+
+        <section class="eves info-line " id="eve_4">
+            <div class="eves-text">
+                <h6>SUNDAY, 2 AUGUST 2020 FROM 14:30 UTC+08-16:00 UTC+08
+
+                </h6>
+                <h1>在創作之間 - 我選擇不服輸
+                </h1>
+            </div>
+
+
+            <div class="eves-intro d-flex flex-column flex-lg-row">
+
+
+                <div class="eves-img col-12 col-lg-7 mt-5 mt-lg-0">
+                    <ul class="list-unstyled d-flex ">
+                        <li><img src="./happenings/３.jpg" alt=""></li>
+                    </ul>
+                </div>
+
+                <div class="eves-text col-12 col-lg-5">
+
+                    <h6>
+
+                        講者：奥斯卡 Oscar T
+                        日期：2020.08.02（週日）14:30-16:00
+                        地點：童里繪本洋行（台北市大安區潮州街15號）
+                        費用：300元（限額30名）
+                        報名連結：https://reurl.cc/AqVzXp
+                        <br>
+                        奧斯卡大學就讀資訊管理系，2011年因單戀的失戀
+                        而開始畫插畫，從無基礎一步步模仿自學，
+                        後因投稿報社失敗而用起了臉書粉絲頁，
+                        逐漸吸引關注，在2019年時又因職涯的低潮開始了Zigma
+                        雜誌計劃，每一次的谷底都成為反彈的契機，
+                        期許每個不服輸的故事為你帶來突破高牆的勇氣。
+                        <br><br>
+
+                        報名連結：https://reurl.cc/AqVzXp
+                        <br><br><br>
+
+                    </h6>
+                    <a class="list-unstyled d-flex col-icon-wrap">
+                        <h6>童里繪本洋行 Maison Temps-Rêves
+                        </h6>
+                        <li><img src="./icon-social-fb.png" alt=""></li>
+                        <li><img src="./icon-social-yt.png" alt=""></li>
+                        <li><img src="./icon-social-tw.png" alt=""></li>
+                    </a>
+
+
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+
+
+
+
+
+
+        <!--頁尾  -->
+        <!-- section footer -->
+
+        <section class="footer info-line-2  ft-info d-flex ">
+
+
+            <!--購物車 -->
+            <div class="shop container">
+                <div class="shop-list-intro flex-col row">
+
+
+
+                    <div class="intro-l col-12 col-lg-8">
+                        <h1>Zigma</h1><br>
+                        <h6>作者：奧斯卡 Oscar T/manual_for_all/廖若凡 Jofan Liao Illustration/An Chen Illustration/Cinyee
+                            Chiu/Jason
+                            Chuang</h6><br>
+                        <h6>出版社：布克文化出版事業部<br>
+                            出版日期：2020/7/23</h6><br>
+                    </div>
+
+                    <div class="intro-r flex-col col-12 col-lg-4">
+                        <div class="price">
+                            <h6>原價$800</h6>
+
+                            <h2>會員價79折</h2>
+                            <h3>NT$623</h3>
+                        </div>
+                    </div>
+
+                    <a class="list-unstyled d-flex -icon-wrap">
+                        <li><img src="./icon-social-fb.png" alt=""></li>
+                        <li><img src="./icon-social-yt.png" alt=""></li>
+                        <li><img src="./icon-social-tw.png" alt=""></li>
+                    </a>
+
+
+
+                </div>
+
+                <div class="shop-wrap row">
+                    <div class="shop-imgwrap" id="zoom">
+                        <a class="list-unstyled d-flex shop-img ">
+                            <li><img src="./Zigma雜誌實拍/332A1866-2.jpg" alt=""></li>
+                        </a>
+
+                    </div>
+                    <div class="btn-container">
+                        <div class="shop-btn d-flex flex-column  ">
+                            <button type="button" class="btn btn-dark mt-5 mt-lg-0 ">放入購物車</button>
+                            <button type="button" class="btn btn-dark">直接結帳</button>
+                            <br>
+                            <button type="button" class="btn btn-light mt-5 mt-lg-0 ">收藏清單</button>
+
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+
+
+
+
+
+
+
+
+
+
+            <h1>“與我們一起開創未來”</h1>
+
+            <div class="ft-img-wrap">
+                <img src="./webZIGMA_LOGO.gif" alt="">
+            </div>
+
+
+            <a class="list-unstyled d-flex ft-icon-wrap">
+                <li><img src="./icon-social-fb.png" alt=""></li>
+                <li><img src="./icon-social-yt.png" alt=""></li>
+                <li><img src="./icon-social-tw.png" alt=""></li>
+            </a>
+
+
+            <nav class="navbar-nav navbar-expand-sm navbar-expand-lg navbar-light ">
+
+
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">關於我們 <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">異業合作 </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">加入ZIG</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">聯絡我們</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">版權聲明</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">ZIGMA MIDEA</a>
+                        </li>
+
+
+                    </ul>
+                </div>
+            </nav>
+
+
+        </section>
+        <div class="footer-bottom"></div>
+    </div>
+    <section class="copyright ft-wrap ft-line">
+        <nav class="navbar-nav navbar-expand-sm navbar-expand-lg navbar-light ">
+
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">©2021 ZIGMA.COM <span class="sr-only">(current)</span></a>
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">ALL RIGHTS RESERVED</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">PRIVACY POLICY</a>
+                    </li>
+
+
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">TERMS OF USE</a>
+                    </li>
+
+
+                </ul>
+            </div>
+        </nav>
+    </section>
+
+
+
+
+    <script src="./JS/jquery-3.5.1.js"></script>
+
+
+    <!-- hearder calendar -->
+    <script>
+        function getFormattedDate(date) {
+            var year = date.getFullYear();
+            var monArray = ['Jun', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
+            var month = date.getMonth();
+            console.log('month', month);
+
+            var day = date.getDate().toString();
+            day = day.length > 1 ? day : '0' + day;
+
+            return monArray[month] + ' ' + day + ', ' + year;
+        }
+        $('#dateNow').text(getFormattedDate(new Date()))
+    </script>
+
+    <!-- zoom -->
+
+    <script src='./JS/zoom/jquery.zoom.js'></script>
+    <script>
+        $(document).ready(function () {
+            $('#zoom').zoom();
+
+        });
+
+
+
+    </script>
+
+
+</body>
+
+</html>

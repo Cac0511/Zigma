@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>magzing</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200;300;400;500;600;700;900&display=swap"
+        rel="stylesheet">
+
+
+    <style>
+        /* important line */
+        .mag-line {
+            max-width: 1200px;
+            margin-top: 3rem;
+            margin-bottom: 1rem;
+            border: black 6px solid;
+            padding-bottom: 1rem;
+
+
+
+
+        }
+
+        .info-line {
+            padding: 3rem;
+            max-width: 1000px;
+            margin: 0 auto;
+            /* index slider*/
+            border-bottom: #77777A 3px solid;
+
+
+        }
+
+
+        .info-line-2 {
+            max-width: 1000px;
+            /* index slider*/
+            margin-top: 3rem;
+            padding-bottom: 3rem;
+            border-bottom: #77777A 3px solid;
+            border-top: #77777A 3px solid;
+
+
+
+        }
+
+        .navbar {
+
+            height: 300px;
+            position: absolute;
+            left: 0;
+            margin-top: 0;
+            overflow: hidden;
+        }
+
+
+
+        .navbar-brand img {
+            width: 50rem;
+            height: 100%;
+            object-fit: cover;
+
+
+
+        }
+
+
+        p {
+            margin-bottom: 0;
+        }
+
+
+        .navbar-calendar {
+            height: 100px;
+            width: 100%;
+
+        }
+
+        .navbar-calendar img {
+            height: 100%;
+
+        }
+
+        .navbar-calendar-wrap {
+            font-family: 'Noto Serif TC', serif;
+        }
+
+        .menu-calendar-col {
+            width: 2px;
+            height: 50px;
+            background-color: #77777A;
+            margin-left: 30px;
+
+        }
+
+
+        .menu-weather {
+            margin: 0 auto;
+            margin-left: 20px;
+
+
+        }
+
+
+
+
+        /* footer style */
+
+
+        .footer {
+            font-family: 'Noto Serif TC', serif;
+            display: flex;
+            flex-direction: column;
+            padding-top: 10rem;
+            padding-bottom: 15px;
+            margin: 0 auto;
+
+        }
+
+        .ft-info {
+            height: 100%;
+            width: 100%;
+        }
+
+        .ft-info h1 {
+            font-family: 'Noto Serif TC', serif;
+            margin: 0 auto;
+        }
+
+        .ft-img-wrap {
+            padding-top: 15rem;
+            height: 100%;
+            width: 100%;
+            position: relative;
+            /* overflow: hidden; */
+        }
+
+        .ft-img-wrap img {
+            height: 300px;
+            width: 100%;
+            position: absolute;
+            object-fit: cover;
+
+        }
+
+
+        .ft-icon-wrap {
+            padding-top: 20rem;
+            padding-bottom: 5rem;
+            margin: 0 auto;
+            /* overflow: hidden; */
+        }
+
+        .ft-icon-wrap img {
+
+            height: 100%;
+            width: 50px;
+            object-fit: cover;
+
+
+        }
+
+
+        .navbar-nav {
+
+            display: flex;
+            font-size: 20px;
+            margin: 0 auto;
+
+
+        }
+
+
+        .footer-bottom {
+            padding-bottom: 5rem;
+        }
+
+        .ft-wrap {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .ft-line {
+            width: 100%;
+            border-top: #77777A 3px solid;
+            border-bottom: #77777A 3px solid;
+            margin-bottom: 1rem;
+        }
+
+
+
+
+        /* section magzine 從這寫 不含頁尾頁首 */
+        .magzine {
+            max-width: 1000px;
+            height: 100%;
+            font-family: 'Noto Serif TC', serif;
+
+        }
+
+        .text-mag {
+            margin-bottom: 3rem;
+        }
+
+        .text-mag h1 {
+            margin-bottom: 3rem;
+        }
+
+
+
+        .maginfo {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding-bottom: 5rem;
+        }
+
+        .maginfo-imgwrap {
+            max-width: 1000px;
+            height: 100%;
+        }
+
+        .maginfo-imgwrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+
+
+        }
+
+        .mag-intro {
+            max-width: 1000px;
+            height: 100%;
+            font-family: 'Noto Serif TC', serif;
+            padding-top: 3rem;
+            margin-bottom: 3rem;
+
+
+        }
+
+        .text-mag-intro h1 {
+            margin-bottom: 3rem;
+        }
+
+        .magimg-intro {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            max-width: 800px;
+            margin: 0 auto;
+            padding-bottom: 3rem;
+            margin-top: 3rem;
+            font-family: 'Noto Serif TC', serif;
+            color: #77777A;
+
+        }
+
+        .magintro-imgwrap {
+            max-width: 800px;
+            height: 100%;
+
+        }
+
+        .magintro-imgwrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+
+
+
+        }
+
+        .magimg-intro h5 {
+
+            padding-top: 3rem;
+            margin: 0 auto;
+
+
+        }
+
+
+
+
+
+
+        /* header style */
+
+        #menu {
+            max-width: 1200px;
+            height: 320px;
+            margin: 0 auto;
+            position: relative;
+            /* background-color: rgb(246, 210, 216) !important; */
+            border-bottom: 9px solid black;
+
+
+        }
+
+
+
+        .header-info {
+            max-width: 1200px;
+            margin-top: 1rem;
+        }
+
+        .nav-link {
+            color: #77777A !important;
+        }
+
+        .nav-header {
+
+            position: relative;
+
+
+        }
+
+        .header-img-wrap {
+            top: 0;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+
+        }
+
+        .header-img-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .navbar-calendar-wrap {
+            width: 100%;
+
+        }
+
+        .btn-lg {
+            max-width: 1200px;
+            height: 100%;
+            margin: 0 auto;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: #77777A 3px solid;
+            border-bottom: #77777A 3px solid;
+
+        }
+
+        .nav-link {
+            font-family: 'Noto Serif TC', serif;
+        }
+
+        .navbar-item .nav-link {
+            color: #77777A !important;
+
+        }
+
+        .navlinks {
+            margin-top: 2rem;
+            border: #77777A 1px solid;
+        }
+
+
+        .nav-space-around {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+
+        }
+
+        .calendar-info h5 {
+            margin-top: 1rem;
+        }
+
+        /* footer購物車 */
+        .shop-list {
+
+            max-width: 1000px;
+            margin-bottom: 10rem;
+            font-family: 'Noto Serif TC', serif;
+
+        }
+
+        .shop-imgwrap {
+            width: 550px;
+            height: 320px;
+            position: relative;
+
+        }
+
+        .shop-img {
+            display: inline-block;
+            /* position: relative; */
+            width: 550px;
+            height: 320px;
+            position: absolute;
+        }
+
+        .shop-img img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        #zoom img::selection {
+            background-color: transparent;
+        }
+
+
+        .btn-container {
+            display: flex;
+            align-items: flex-end;
+            margin-left: 15rem;
+
+        }
+
+        .shop-btn .btn {
+
+            margin-top: 1rem;
+            width: 120px;
+        }
+
+        .shop-list-intro {
+            padding-top: 1rem;
+            height: 500px;
+           
+            margin-bottom: 5rem;
+            border: #77777A 1px solid;
+          
+        }
+
+        .intro-r {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        #zoom:after {
+            content: '';
+            display: block;
+            width: 33px;
+            height: 33px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: url(./JS/zoom/icon.png);
+        }
+
+        .shop-wrap {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            padding-bottom: 10rem;
+        }
+
+        
+        
+        html {
+            scroll-behavior: smooth;
+        }
+
+        
+        a{
+            color: #77777A;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <!--section header -->
+    <section class="header-info container d-flex flex-column flex-lg-row">
+        <!-- shop log-in-->
+        <nav class="nav-sm col-12 col-lg-2">
+            <div class="navlinks">
+
+                <a class="nav-link active" href="#">購物車</a>
+                <a class="nav-link" href="#">電子報</a>
+                <a class="nav-link" href="#">登入</a>
+            </div>
+
+        </nav>
+
+        <!-- logo on head -->
+        <!-- Just an image -->
+        <nav class="nav-header col-12 col-lg-5 mt-5 mt-lg-0  ">
+            <a class="navbar-brand header-img-wrap" href="./index.html">
+                <img src="./webZIGMA_LOGO.gif" width="" height="" alt="">
+            </a>
+        </nav>
+
+
+        <!-- header calendar -->
+
+        <div class="navbar-calendar-wrap col-12 col-lg-5">
+            <h6>Zigma-taipei-2021</h6>
+            <img src="./ibsn.png" alt="">
+            <div class="calender-infobox">
+                <div class="calender-box">
+                    <p>Monday</p>
+                    <div class="calendar-info d-flex">
+
+                        <h5 id="dateNow">Feb 28,2021 </h5>
+
+                        <div class="menu-calendar-col"></div>
+
+                        <div class="menu-weather">
+                            <div class="cloud-wrap">
+                                <!-- <img src="./bk-cloud.gif" alt=""> -->
+                            </div>
+                            <h4>28</h4>
+                            <h8>LOW</h8>
+                        </div>
+                        <div class="menu-calendar-col "></div>
+                        <div class="menu-weather">
+                            <div class="cloud-wrap">
+                                <!-- <img src="./wt-cloud.png" alt=""> -->
+                            </div>
+                            <h4>32</h4>
+                            <h8>HIGHT</h8>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <!-- section menu   -->
+
+    <section class="menu-br2" id="menu-br2">
+        <nav class="btn-lg d-flex navbar-expand-sm navbar-expand-lg navbar-light  ">
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <div class="nav-space-around">
+                    <ul class="navbar-item d-flex list-unstyled  ">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="./magzine.html">MAGZINE <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./columns.html">COLUNMS </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./happenings.html">HAPPENINGS</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </section>
+
+
+
+
+    <!-- index infomation !!!important line!!! -->
+    <div class="info container mag-line">
+        <!-- 網頁雜誌線 -->
+
+
+        <!-- section mag  -->
+
+        <section class="magzine info-line container " id="magzine">
+
+            <div class="text-mag">
+                <h6>創刊號</h6>
+                <h1>虛擬現實</h1>
+                <h5>世界上第一部劇情電影即是科幻電影 – 喬治梅里葉的月球之旅。
+
+                    1968年，《2001太空漫遊》上映；
+                    隔年，人類首次登陸月球；
+                    1973年，《超世紀諜殺案》描述了高暖化的世界，
+                    現在，澳洲野火仍在燃燒。
+
+                    人類都曾經徬徨，
+                    但科幻故事帶領我們探索未知、預見未來，
+                    科幻讓想像力自由，
+                    啟發我們對世界的好奇、擴展思考的疆界。
+
+                    台灣第一本科幻圖像小說雜誌《Zigma》，
+                    2020 即將啟航，與我們一起，開創未來！</h5>
+            </div>
+        </section>
+
+        <section class="maginfo d-flex container">
+            <div class="mag-wrap ">
+                <a class="maginfo-imgwrap list-unstyled">
+                    <li><img src="./Magzine/img/Zigma_1.jpg" alt=""></li>
+                </a>
+            </div>
+        </section>
+
+        <!-- section mag-intro-1 -->
+        <section class="mag-intro info-line-2 container " id="mag-intro">
+
+            <div class="text-mag-intro">
+
+                <h1>你從來沒想過的！屬於台灣最特別的刊物</h1>
+                <h5>小時候，我們都曾是那個漫畫不離手的孩子，《海賊王》、《名偵探柯南》還有《灌籃高手》都是屬於
+                    我們的青春回憶；而我們卻沒有發現，身在台灣的我們，對於台灣漫畫一知半解，甚至沒有看過任何一
+                    本台漫。可能是畫風、故事主題，或是大環境造成的種種因素，台灣人並不太看台灣漫畫，台漫所面臨
+                    的危機，至今仍沒有答案。也許，圖像小說會是台漫的新解！繪本能說的故事內容有限，傳統漫畫對插
+                    畫家來說又有點吃力，圖像小說則是一種介於繪本與傳統漫畫的說故事方式，既能以圖畫來呈現，又能
+                    用像是小說般的文字內容加以敘述，題材範圍更寬廣，表現手法也更自由。
+
+                    基於這樣的理念與嚮往，《Zigma》集結了七位創作者的創作能量、台北市政府文化局的扶植等各界
+                    力量，我們想要為台灣創作第一本「科幻圖像小說雜誌」，並以半年刊形式發行四期（此集資計畫為創
+                    刊號）。我們深切地希望透過這個計畫，創造屬於台灣最特別的刊物，如果能為台灣的創作圈帶來一點
+                    點變化，那就太值得了！</h5>
+            </div>
+        </section>
+
+
+        <section class="magimg-intro container flex-column">
+            <div class="intro-imgwrap ">
+                <a class="magintro-imgwrap list-unstyled">
+                    <li><img src="./Magzine/img/Essential-Stationery-Mockup-1024x801.jpg" alt=""></li>
+                </a>
+            </div>
+            <h5>《Zigma》雜誌與回饋商品示意圖</h5>
+        </section>
+
+        <!-- section mag-intro-2 -->
+        <section class="mag-intro info-line-2 container " id="mag-intro">
+
+            <div class="text-mag-intro">
+
+                <h1>你從來沒聽過的！台灣第一本以科幻為主軸的圖像小說雜誌</h1>
+                <h5>我們一開始便將《Zigma》定調為實驗性的原創內容，不只有別於市場中的主流形式，還要以「科幻」
+                    為創作主題。
+
+                    當時正好也看到了 Netflix 的《黑鏡》與《愛*死*機器人》，深受其中對於科幻的想像、天馬行空
+                    的創意，以及科幻與人性的複雜關係所吸引。透過科幻主軸下的烏托邦世界，還原創作者們強烈的創作
+                    意圖。
+
+                    當然我們最希望的是《Zigma》能帶來更多的可能性，題材的可能性、畫風的可能性，或是表現手法
+                    的可能性，沒有限制、更沒有框架。不論《Zigma》最終走向為何，在這創作、發行的過程中，一定
+                    會在台灣圖像創作界劃下一道別開生面的風景。
+
+                </h5>
+            </div>
+        </section>
+
+
+        <section class="magimg-intro container flex-column">
+            <div class="intro-imgwrap ">
+                <a class="magintro-imgwrap list-unstyled">
+                    <li><img src="./Magzine/img/Zigma-繪本內頁7-1024x693.jpg" alt=""></li>
+                </a>
+            </div>
+            <h5>《Zigma》雜誌與回饋商品示意圖</h5>
+        </section>
+
+
+
+        <!-- section mag-intro-3 -->
+        <section class="mag-intro info-line-2 container " id="mag-intro">
+
+            <div class="text-mag-intro">
+
+                <h1>你從來沒看過的！七位台灣新生代創作者攜手創作的七個科幻故事</h1>
+                <h5>刊物名《Zigma》來自於數學的求和符號 Σ。《Zigma》是一本以創作者為核心的雜誌，也可以看
+                    做是創作者的加總。
+
+                    「創作者為核心」的意思是《Zigma》有四名主要創作者，包含 Oscar、 manual＿for＿all
+                    、廖若凡和安，每人將以 30 單頁左右的篇幅講述科幻主題卻截然不同的故事，並以中英文雙語呈現。
+                    四位不同畫風的創作者，不但呈現風格的多元性，多人共同討論故事、分鏡、呈現手法，彼此藉由分享
+                    找到自己說故事的方式，也讓整體故事更完整。
+
+                    《Zigma》不只是一個雜誌計劃，更是一個創作者的成長計劃。這一期也將有三位客座創作者的加入
+                    ，讓整本雜誌更為豐富，在畫風與主題的實驗性上相互激盪，創造出更完整的內容。
+
+                </h5>
+            </div>
+        </section>
+
+
+        <section class="magimg-intro container flex-column">
+            <div class="intro-imgwrap ">
+                <a class="magintro-imgwrap list-unstyled">
+                    <li><img src="./Magzine/img/OLYMPUS-跨頁-768x542.jpg" alt=""></li>
+                </a>
+            </div>
+            <h5>《Zigma》雜誌與回饋商品示意圖</h5>
+        </section>
+
+
+
+        <!-- section mag-intro-4 -->
+        <section class="mag-intro info-line-2 container " id="mag-intro">
+
+            <div class="text-mag-intro">
+
+                <h1>你從來沒摸過的！跳脫常規的高質感雜誌</h1>
+                <h5>《Zigma》是一本集結了七位創作者作品的雜誌，因此設計師宋政傑為了配合每位創作者的風格，特意讓《Zigma》的印刷在每一章節都有不同的設定，並調整適當的紙張，呈現不同的紙質與手感。整體氛圍想帶給讀者的不只是有一點歐洲刊物的潮流、藝術，更揉入台灣的鄉土與在地。
+
+                    而在書名字體呈現方面，宋政傑則希望能讓字體的個性最大化，因為仔細觀察 Zigma
+                    字體，會發現有許多切角，這個手法在製造一個完美的字體上並不常見，卻很獨特，如同《Zigma》想表現給讀者的科幻感、一本跳脫常規的圖文雜誌。
+
+                </h5>
+            </div>
+        </section>
+
+
+        <section class="magimg-intro  container flex-column ">
+            <div class="intro-imgwrap ">
+                <a class="magintro-imgwrap list-unstyled">
+                    <li><img src="./Magzine/img/Zigma-海報5-2-1024x718.jpg" alt=""></li>
+                </a>
+            </div>
+            <h5>《Zigma》雜誌與回饋商品示意圖</h5>
+        </section>
+
+
+
+
+
+
+        <!--頁尾  -->
+        <!-- section footer -->
+
+        <section class="footer info-line-2  ft-info d-flex ">
+
+
+            <!--購物車 -->
+            <div class="shop container">
+                <div class="shop-list-intro flex-col row">
+                    <div class="intro-l col-12 col-lg-8">
+                        <h1>Zigma</h1><br>
+                        <h6>作者：奧斯卡 Oscar T/manual_for_all/廖若凡 Jofan Liao Illustration/An Chen Illustration/Cinyee
+                            Chiu/Jason
+                            Chuang</h6><br>
+                        <h6>出版社：布克文化出版事業部<br>
+                            出版日期：2020/7/23</h6><br>
+                    </div>
+
+                    <div class="intro-r col-12 col-lg-4">
+                        <div class="price">
+                            <h6>原價$800</h6>
+
+                            <h2>會員價79折</h2>
+                            <h3>NT$623</h3>
+                        </div>
+                    </div>
+
+                    <a class="list-unstyled d-flex -icon-wrap">
+                        <li><img src="./icon-social-fb.png" alt=""></li>
+                        <li><img src="./icon-social-yt.png" alt=""></li>
+                        <li><img src="./icon-social-tw.png" alt=""></li>
+                    </a>
+
+
+
+                </div>
+
+                <div class="shop-wrap row">
+                    <div class="shop-imgwrap" id="zoom">
+                        <a class="list-unstyled d-flex shop-img ">
+                            <li><img src="./Zigma雜誌實拍/332A1866-2.jpg" alt=""></li>
+                        </a>
+
+                    </div>
+                    <div class="btn-container">
+                        <div class="shop-btn d-flex flex-column  ">
+                            <button type="button" class="btn btn-dark mt-5 mt-lg-0 ">放入購物車</button>
+                            <button type="button" class="btn btn-dark">直接結帳</button>
+                            <br>
+                            <button type="button" class="btn btn-light mt-5 mt-lg-0 ">收藏清單</button>
+
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+
+
+
+
+            <h1>“與我們一起開創未來”</h1>
+
+            <div class="ft-img-wrap">
+                <img src="./webZIGMA_LOGO.gif" alt="">
+            </div>
+
+
+            <a class="list-unstyled d-flex ft-icon-wrap">
+                <li><img src="./icon-social-fb.png" alt=""></li>
+                <li><img src="./icon-social-yt.png" alt=""></li>
+                <li><img src="./icon-social-tw.png" alt=""></li>
+            </a>
+
+
+            <nav class="navbar-nav navbar-expand-sm navbar-expand-lg navbar-light ">
+
+
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">關於我們 <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">異業合作 </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">加入ZIG</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">聯絡我們</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">版權聲明</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">ZIGMA MIDEA</a>
+                        </li>
+
+
+                    </ul>
+                </div>
+            </nav>
+
+
+        </section>
+    </div>
+    <div class="footer-bottom"></div>
+    </div>
+    <section class="copyright ft-wrap ft-line">
+        <nav class="navbar-nav navbar-expand-sm navbar-expand-lg navbar-light ">
+
+
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">©2021 ZIGMA.COM <span class="sr-only">(current)</span></a>
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">ALL RIGHTS RESERVED</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">PRIVACY POLICY</a>
+                    </li>
+
+
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">TERMS OF USE</a>
+                    </li>
+
+
+                </ul>
+            </div>
+        </nav>
+    </section>
+
+
+
+
+    <script src="./JS/jquery-3.5.1.js"></script>
+
+
+    <!-- hearder calendar -->
+    <script>
+        function getFormattedDate(date) {
+            var year = date.getFullYear();
+            var monArray = ['Jun', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
+            var month = date.getMonth();
+            console.log('month', month);
+
+            var day = date.getDate().toString();
+            day = day.length > 1 ? day : '0' + day;
+
+            return monArray[month] + ' ' + day + ', ' + year;
+        }
+        $('#dateNow').text(getFormattedDate(new Date()))
+
+    </script>
+
+    <!-- zoom -->
+
+    <script src='./JS/zoom/jquery.zoom.js'></script>
+    <script>
+        $(document).ready(function () {
+            $('#zoom').zoom();
+
+        });
+
+
+        
+        var url = window.location.href;
+        var id = url.substring(url.lastIndexOf('#'));
+        $('html, body').animate({ scrollTop: $(id).offset().top - 50 }, 300);
+
+    </script>
+</body>
+
+</html>
